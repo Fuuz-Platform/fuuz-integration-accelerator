@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fuuz Integration Orchestrator &mdash; Fuuz Accelerator</title>
+<meta name="description" content="Fuuz Integration Accelerator - cross tenant - external connections package">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://accelerators.fuuz.com/fuuz-integration-accelerator/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://accelerators.fuuz.com/fuuz-integration-accelerator/">
+<meta property="og:site_name" content="Fuuz Accelerators">
+<meta property="og:title" content="Fuuz Integration Orchestrator &mdash; Fuuz Accelerator">
+<meta property="og:description" content="Fuuz Integration Accelerator - cross tenant - external connections package">
+<link rel="icon" href="assets/appicon-violet.svg">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="prose.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Fuuz Integration Orchestrator",
+  "url": "https://accelerators.fuuz.com/fuuz-integration-accelerator/",
+  "description": "Fuuz Integration Accelerator - cross tenant - external connections package",
+  "codeRepository": "https://github.com/Fuuz-Platform/fuuz-integration-accelerator",
+  "applicationCategory": "BusinessApplication",
+  "runtimePlatform": "Fuuz",
+  "author": {
+    "@type": "Organization",
+    "name": "Fuuz",
+    "url": "https://fuuz.com"
+  }
+}
+</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="../"><img src="assets/logo-horizontal-on-midnight.svg" alt="Fuuz"></a>
+    <span class="section">Accelerators</span>
+    <nav><a href="#the-scenario">The Scenario</a><a href="#one-application-one-platform">One Application, One Platform</a><a href="#6-data-models">6 Data Models</a><a href="https://github.com/Fuuz-Platform/fuuz-integration-accelerator">GitHub</a></nav>
+  </div>
+</header>
+<main>
+<div class="wrap hero">
+  <p class="eyebrow">Accelerator &middot; Integration package</p>
+  <h1>Fuuz Integration <span class="accent">Orchestrator</span></h1>
+  <p class="lede">Fuuz Integration Accelerator - cross tenant - external connections package</p>
+  <div class="ctas">
+    <a class="cta cta-primary" href="https://github.com/Fuuz-Platform/fuuz-integration-accelerator">Get the package</a>
+    <a class="cta cta-secondary" href="../">All accelerators</a>
+  </div>
+</div>
+<section>
+  <div class="wrap prose">
+<p>A small, generic message-routing and staging application built on the <a href="https://fuuz.app">FUUZ</a> platform for connecting a Fuuz tenant to external ERP/host systems — the foundation other accelerators (MES, WMS, CMMS, QMS) build their integration flows on top of.</p>
+<h2 id="the-scenario">The Scenario</h2>
+<p>A Fuuz tenant needs a consistent, auditable way to exchange messages with external systems — an ERP, a host, or another platform — without every accelerator inventing its own integration pattern. The Integration Orchestrator provides a single configuration surface, message staging table, and dashboard that other Fuuz accelerators' packaged integration flows route through.</p>
+<h2 id="one-application-one-platform">One Application, One Platform</h2>
+<p><strong>Package:</strong> <code>Integration Orchestrator@0.0.9.fuuz</code></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Models</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Screens</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Data Flows</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Document Designs</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Seeded Reference Data Sets</td>
+<td>6</td>
+</tr>
+</tbody>
+</table></div>
+<p>Built against <strong>platform version 2026.7.0</strong>.</p>
+<h2 id="6-data-models">6 Data Models</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Models</th>
+<th>What They Track</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Integration</strong></td>
+<td>IntegrationConfiguration, IntegrationMessage, IntegrationMessageType, IntegrationStaging, IntegrationType, StagingTableStatus</td>
+<td>Per-system integration configuration, the messages exchanged, and their staging-table lifecycle</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="5-screens">5 Screens</h2>
+<ul>
+<li><strong>Integration Setup</strong> — define an Integration Configuration and Integration Type per external system</li>
+<li><strong>Integration Transactions</strong> — review individual integration messages</li>
+<li><strong>Manage Integration Configuration</strong> — configuration management screen</li>
+<li><strong>Manage Integration Type</strong> — integration type management screen</li>
+<li><strong>Integration Dashboard</strong> — live monitoring across all configured integrations</li>
+</ul>
+<h2 id="4-data-flows">4 Data Flows</h2>
+<ul>
+<li><strong>Integration: Main Handler</strong> — top-level message routing</li>
+<li><strong>Integration: Main Flow Request Handler</strong> — request handling for integration flows</li>
+<li><strong>Int_Outbound App Tenant Request Handler</strong> — outbound request handling to the source tenant</li>
+<li><strong>Integration Orchestrator Dashboard</strong> — dashboard data flow</li>
+</ul>
+<h2 id="seeded-reference-data">Seeded Reference Data</h2>
+<p>This package ships seeded values for <code>Sequence</code>, <code>Topic</code>, <code>StagingTableStatus</code>, <code>IntegrationMessageType</code>, <code>ModuleGroup</code>, and <code>Module</code>.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3>Import into FUUZ</h3>
+<ol>
+<li>Request a <a href="https://forms.zohopublic.com/mfgxonlinesaas/form/TrialNotificationForm/formperma/syUyoccvUH7Ef5DaReDpfM48vuKiZtaGfYN18JPPu9k">free trial of FUUZ</a></li>
+<li>Navigate to <strong>Fuuz Packages</strong></li>
+<li>Upload <code>Integration Orchestrator@0.0.9.fuuz</code></li>
+<li>Review the import preview and confirm</li>
+<li>Use the Integration Setup screen to define an Integration Configuration and Integration Type for each external system, then monitor message flow via the Integration Dashboard</li>
+</ol>
+<h3>Explore the Package</h3>
+<p>Each <code>.fuuz</code> file is a gzipped tarball containing three JSON files:</p>
+<pre><code class="language-bash">mkdir extracted &amp;&amp; cd extracted
+tar -xzf &quot;../Integration Orchestrator@0.0.9.fuuz&quot;
+
+ls -lh
+# manifest.json      - Package metadata (name, version, dependencies)
+# definition.json    - Module groups, modules, and enum seed data
+# package-data.json  - Data models, screens, flows, and seed data
+</code></pre>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A Fuuz Industrial Intelligence Platform tenant, platform version 2026.7.0 or later</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Free Trial</strong></td>
+<td><a href="https://forms.zohopublic.com/mfgxonlinesaas/form/TrialNotificationForm/formperma/syUyoccvUH7Ef5DaReDpfM48vuKiZtaGfYN18JPPu9k">fuuz.app</a></td>
+<td>Request your free trial of FUUZ</td>
+</tr>
+<tr>
+<td><strong>Get Started</strong></td>
+<td><a href="https://getstarted.fuuz.com">getstarted.fuuz.com</a></td>
+<td>Introductory videos and walkthroughs</td>
+</tr>
+<tr>
+<td><strong>FUUZ Academy</strong></td>
+<td><a href="https://academy.fuuz.com">academy.fuuz.com</a></td>
+<td>Online LMS with structured courses and certifications</td>
+</tr>
+<tr>
+<td><strong>Support &amp; Community</strong></td>
+<td><a href="https://support.fuuz.com">support.fuuz.com</a></td>
+<td>Knowledge base, documentation, and customer community</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="license">License</h2>
+<p>© Fuuz. All rights reserved. This package is proprietary software provided for use with the Fuuz Industrial Intelligence Platform. Redistribution or use outside of a licensed Fuuz tenant is not permitted without express written permission.</p>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Fuuz&reg; is an Enterprise Industrial Intelligence Platform.
+      <a href="https://accelerators.fuuz.com/">All accelerators</a> &middot;
+      <a href="https://github.com/Fuuz-Platform/fuuz-integration-accelerator">Source</a> &middot;
+      <a href="https://fuuz.com">fuuz.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
