@@ -8,7 +8,7 @@
     ],
     "mainImage": {
       "file": "images/main.png",
-      "alt": "Cross-Tenant Integration: Fuuz title card"
+      "alt": "Cross-Tenant Integration: Fuuz cover"
     },
     "description": [
       "A small, generic message-routing and staging application built on the FUUZ platform for connecting a Fuuz tenant to external ERP/host systems — the foundation other accelerators (MES, WMS, CMMS, QMS) build their integration flows on top of.",
