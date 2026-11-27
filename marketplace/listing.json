@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "visibility": "public",
+  "overview": {
+    "tagline": "Fuuz Integration Accelerator — cross tenant — external connections package",
+    "categories": [
+      "Integration"
+    ],
+    "mainImage": {
+      "file": "images/main.png",
+      "alt": "Cross-Tenant Integration: Fuuz title card"
+    },
+    "description": [
+      "A small, generic message-routing and staging application built on the FUUZ platform for connecting a Fuuz tenant to external ERP/host systems — the foundation other accelerators (MES, WMS, CMMS, QMS) build their integration flows on top of.",
+      "A Fuuz tenant needs a consistent, auditable way to exchange messages with external systems — an ERP, a host, or another platform — without every accelerator inventing its own integration pattern. The Integration Orchestrator provides a single configuration surface, message staging table, and dashboard that other Fuuz accelerators' packaged integration flows route through."
+    ],
+    "highlights": [
+      {
+        "title": "One integration pattern",
+        "body": "A single configuration surface, message staging table and dashboard that other accelerators' integration flows route through."
+      },
+      {
+        "title": "Small and generic",
+        "body": "6 data models, 5 screens and 4 data flows, for any ERP, host or other platform."
+      },
+      {
+        "title": "See every message",
+        "body": "Messages to and from external systems are staged and shown on the Integration Dashboard."
+      }
+    ],
+    "screenshots": []
+  },
+  "pricing": {
+    "model": "free",
+    "detail": "Fuuz accelerators are no cost; you pay only for the Fuuz runtime."
+  },
+  "support": {
+    "email": "sales@fuuz.com",
+    "url": "https://github.com/Fuuz-Platform/fuuz-integration-accelerator",
+    "sla": "No service level agreement. Supported once implemented by a Fuuz services professional or an approved Fuuz partner.",
+    "phone": ""
+  },
+  "security": {
+    "residency": "In the customer's Fuuz environment",
+    "external": true,
+    "externalDetail": "It exchanges messages with the external ERP, host or other systems you configure on the Integration Setup screen.",
+    "certs": "",
+    "notes": ""
+  },
+  "install": {
+    "prerequisites": [
+      "Fuuz 2026.7.0 or later"
+    ],
+    "steps": [
+      {
+        "text": "Review the import preview and confirm the import."
+      },
+      {
+        "text": "On the Integration Setup screen, define an Integration Configuration and Integration Type for each external system."
+      },
+      {
+        "text": "Watch message flow on the Integration Dashboard."
+      }
+    ],
+    "after": ""
+  }
+}
